@@ -1,4 +1,5 @@
 import Hero from "./components/Hero/Hero";
+import List from "./components/List/List";
 import SearchForm from "./components/SearchForm/SearchForm";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
   <div>
     <Hero/>
     <SearchForm/>
+    <List/>
   </div>
   );
 }
