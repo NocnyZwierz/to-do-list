@@ -1,14 +1,16 @@
 import Card from '../Card/Card';
 import CardForm from '../CardForm/CardForm';
-import style from './Column.module.scss'
+import style from './Column.module.scss';
+import { useSelector } from 'react-redux';
 
 const Column = props => {
+    const cards = useSelector(state => state.cards.filter(card => card.columnId === props.id));
     return (
         <article className={style.column}>
             <span className={style.icon + ' fa fa-' + props.icon} />
             <h2 className={style.title}>{props.title}</h2>
             <ul className={style.cards}>
-                {props.cards.map(card => <Card key={card.id} title={card.title} />)}
+                {cards.map(card => <Card key={card.id} title={card.title} />)}
             </ul>
             <CardForm columnId={props.id} action={props.action} />
             {/* przekazujemy przez pośrednika używajać props.id i props.action i pchamy dalej do caedForm */}
