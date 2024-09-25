@@ -3,8 +3,14 @@ import CardForm from '../CardForm/CardForm';
 import style from './Column.module.scss';
 import { useSelector } from 'react-redux';
 
-const Column = props => {
-    const cards = useSelector(state => state.cards.filter(card => card.columnId === props.id));
+const Column = (props) => {
+    const searchString = useSelector(state => state.searchString.toLowerCase());
+    const cards = useSelector(state => 
+        state.cards.filter(card => 
+            card.columnId === props.id && card.title.toLowerCase().includes(searchString)
+        )
+    );
+
     return (
         <article className={style.column}>
             <span className={style.icon + ' fa fa-' + props.icon} />
