@@ -19,6 +19,8 @@ export const getColumnsByList = ({ columns }, listId) => columns.filter(column =
 
 export const getAllLists = (state) => state.lists;
 
+export const getFavoriteCards = ({ cards }) => {return cards.filter(card => card.isFavorite)};
+
 const reducer = (state, action) => {
     switch(action.type) {
         case 'ADD_COLUMN':
@@ -29,6 +31,8 @@ const reducer = (state, action) => {
             return { ...state, cards: [...state.cards, { id: shortid(), ...action.payload.card, columnId: action.payload.columnId }]};
         case 'UPDATE_SEARCH':
             return { ...state, searchString: action.payload };
+        case 'TOGGLE_CARD_FAVORITE':
+            return { ...state, cards: state.cards.map(card => card.id === action.payload ? { ...card, isFavorite: !card.isFavorite } : card)};
         default:
             return state;
     }

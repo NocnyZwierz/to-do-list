@@ -10,4 +10,21 @@
     display: flex;
     justify-content: space-between;
     font-weight: bold;
+
+    button {
+        .fa-star, .fa-star-o {
+            font-size: 20px;
+            cursor: pointer;
+            color: gray; /* Kolor dla nieaktywnych gwiazdek */
+        }
+
+        .fa-star {
+            color: gold; /* Złoty kolor dla aktywnych gwiazdek */
+        }
+
+        .fa-star-o {
+            color: gray; /* Kolor dla nieaktywnych gwiazdek */
+        }
+    }
 }
+
