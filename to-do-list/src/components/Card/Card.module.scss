@@ -12,19 +12,17 @@
     font-weight: bold;
 
     button {
-        .fa-star, .fa-star-o {
-            font-size: 20px;
-            cursor: pointer;
-            color: gray; /* Kolor dla nieaktywnych gwiazdek */
+        border: none;
+        background-color: $color-light;
+        i {
+          color: gray;
+    
+          &.active {
+            color: gold;
+          }
         }
+      }
 
-        .fa-star {
-            color: gold; /* Złoty kolor dla aktywnych gwiazdek */
-        }
 
-        .fa-star-o {
-            color: gray; /* Kolor dla nieaktywnych gwiazdek */
-        }
-    }
 }
 

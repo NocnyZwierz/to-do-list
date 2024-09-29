@@ -5,7 +5,7 @@ import store from './redux/store'
 import App from './App';
 import './style/normalize.scss';
 import './style/global.scss';
-import 'font-awesome/css/font-awesome.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

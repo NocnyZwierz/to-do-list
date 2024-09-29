@@ -5,10 +5,9 @@ const Card = props => {
     return (
         <li className={style.card}>
             {props.title}
-            <button 
-                className={clsx('fa', { 'fa-star-o': !props.isFavorite, 'fa-star': props.isFavorite })} 
-                onClick={props.toggleFavorite}
-            />
+            <button onClick={props.toggleFavorite}>
+            <i className={clsx('fa-regular fa-star', { 'active': props.isFavorite })}></i>
+        </button>
         </li>
     )
 }
