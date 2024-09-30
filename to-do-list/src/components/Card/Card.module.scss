@@ -17,15 +17,11 @@
         cursor: pointer;
         i {
           color: gray;
-          
-    
-          // &.active {
-          //   color: gold !important;
-          // }
         }
-      }
-      .card button i.active {
-        color: gold !important;
+
+        .active {
+          color: gold !important;
+        }
       }
 
 }
