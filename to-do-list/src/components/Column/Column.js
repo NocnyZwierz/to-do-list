@@ -11,7 +11,6 @@ const Column = (props) => {
     const handleToggleFavorite = (cardId) => {
         dispatch({type: 'TOGGLE_CARD_FAVORITE', payload: cardId})
     }
-
     return (
         <article className={style.column}>
             <span className={style.icon + ' fa fa-' + props.icon} />

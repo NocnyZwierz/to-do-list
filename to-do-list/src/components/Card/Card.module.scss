@@ -14,15 +14,19 @@
     button {
         border: none;
         background-color: $color-light;
+        cursor: pointer;
         i {
           color: gray;
+          
     
-          &.active {
-            color: gold;
-          }
+          // &.active {
+          //   color: gold !important;
+          // }
         }
       }
-
+      .card button i.active {
+        color: gold !important;
+      }
 
 }
 

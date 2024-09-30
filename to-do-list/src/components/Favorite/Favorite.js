@@ -11,7 +11,6 @@ const Favorite = () => {
     if (favoriteCards.length === 0) {
         return <Navigate to="/" />;
     }
-    console.log(favoriteCards,'<---------------------------');
     return (
         <section>
             <PageTitle>Favorite</PageTitle>
