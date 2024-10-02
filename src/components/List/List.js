@@ -1,4 +1,5 @@
-import { getColumnsByList, getListById  } from '../../redux/store';
+import { getListById  } from '../../redux/listsRedux';
+import { getColumnsByList } from '../../redux/columnsRedux';
 import Column from '../Column/Column';
 import ColumnForm from '../ColumnForm/ColumnForm';
 import style from './List.module.scss';
@@ -12,6 +13,7 @@ const List = () => {
     const listData = useSelector(state => getListById(state, id));
   
     if (!listData) return <Navigate to="/" />;
+    if (!columns) return <Navigate to="/" />;
     return (
       <div>
         <header className={style.header}>

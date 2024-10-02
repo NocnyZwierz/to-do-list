@@ -8,9 +8,9 @@
     margin: 0 0 $base-size 0;
     border-radius: $radius;
     display: flex;
-    justify-content: space-between;
+     justify-content: space-between;
+    
     font-weight: bold;
-
     button {
         border: none;
         background-color: $color-light;
@@ -23,6 +23,12 @@
           color: gold !important;
         }
       }
+    .trash {
+      cursor: pointer;
 
+      &:hover {
+        color: black;
+      }
+    }
 }
 

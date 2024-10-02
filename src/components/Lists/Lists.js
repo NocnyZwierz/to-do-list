@@ -1,13 +1,10 @@
 import style from './Lists.module.scss';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { getAllLists } from '../../redux/store';
-import TextInput from '../TextInput/TextInput';
-import Button from '../Button/Button';
+import { getAllLists } from '../../redux/listsRedux';
 import ListForm from '../ListForm/ListForm';
 
 const Lists = () => {
-
 const lists = useSelector(getAllLists);
     return (
         <section className={style.lists}>
